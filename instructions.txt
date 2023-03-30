@@ -1,7 +1,16 @@
-Your boss has given you the following project to fix for a client. It's supposed to be a simple dice
-game where the object of the game is to correctly add up the values of the dice for 6 consecutive turns.
+Your boss has given you the following project to fix for a client. It's supposed
+to be a simple dice game, where the object of the game is to correctly add up
+the values of the dice for 6 consecutive turns.
 
-The issue is that a former programmer worked on it and didn't know how to debug effectively. It's now up to
-you to fix the errors and finally make the game playable.
+The issue is that a former programmer worked on it who didn't know how to debug
+effectively. It's now up to you to clean up this code and add tests. After
+running main.py, answer the questions below.
 
-To play the game you must run the main.py file.
+What behaviors do you want to test? List at least three test cases. Make sure at
+least one is something the code doesn't do yet.
+  Example (done): The dice should be able to show any of the 6 possible values.
+
+What are your goals for improving the code? List at least three nontrivial
+changes (that is, beyond changing what's in print statements). These should
+include ensuring all your tests pass!
+  Example (done): Invalid inputs for the "continue" prompt shouldn't throw an error.
