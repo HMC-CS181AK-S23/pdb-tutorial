@@ -68,8 +68,9 @@ see examples of tests:
 * [DataQuest tutorial for unit tests](https://www.dataquest.io/blog/unit-tests-python/)
 * (Advanced) [Python examples of mock](https://docs.python.org/3/library/unittest.mock-examples.html)
 
-Try to also add at least one test in test_runner that just makes sure the runner
-actually runs. As a hint, to simulate a user's input, you can use
+I'd encourage you to try to add at least one test in test_runner that just makes
+sure the runner actually runs (independently of whether it gives the right
+output). As a hint, to simulate a user's input, you can use
 `unittest.mock.patch` to basically overwrite what `input` means while the test
 case is running, as [shown
 here](https://stackoverflow.com/questions/46222661/how-to-mock-a-user-input-in-python).
