@@ -49,12 +49,11 @@ code from the local `dicegame` package, which is the package name for your
 codebase.
 
 If you want to run all the tests, you can navigate to the top-level directory of
-the repository and run
-```python3 -m unittest```
-to run all of the tests that can be discovered in the directory. It'll automatically
-discover all of the tests in the folder. If you want to run subparts, you can add
-information about where a specific file, class, or test is, e.g.
-```python -m unittest tests.test_die.TestDie.test_valid ```
+the repository and run ```python3 -m unittest``` to run all of the tests that
+can be discovered in the directory. It'll automatically discover all of the
+tests in the folder. If you want to run subparts, you can add information about
+where a specific file, class, or test is, e.g. ```python -m unittest
+tests.test_die.TestDie.test_valid ```
 
 (Note: the reason `unittest` works with no arguments has to do with telling
 Python that the `tests` folder is its own module with an empty `__init__` file -
@@ -74,6 +73,12 @@ output). As a hint, to simulate a user's input, you can use
 `unittest.mock.patch` to basically overwrite what `input` means while the test
 case is running, as [shown
 here](https://stackoverflow.com/questions/46222661/how-to-mock-a-user-input-in-python).
+Here, you'll probably want a sequence of inputs, which can be achieved using the
+`side_effect` instead of `return_value`, like
+```python
+with mock.patch("builtins.input", side_effect=["input1", "input2", "input3"]):
+    # do stuff
+```
 
 It's possible that in the process of writing tests for this code, you'll realize
 that there are parts of the code organization that make it hard to test.
